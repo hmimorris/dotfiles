@@ -1,8 +1,0 @@
-2021/03/20-17:09:15.227 77e1 Reusing MANIFEST /home/hunter/.config/google-chrome/Default/IndexedDB/chrome-extension_cjpalhdlnbpafiamejdnhcphjbkeiagm_0.indexeddb.leveldb/MANIFEST-000001
-2021/03/20-17:09:15.228 77e1 Recovering log #7
-2021/03/20-17:09:15.228 77e1 Reusing old log /home/hunter/.config/google-chrome/Default/IndexedDB/chrome-extension_cjpalhdlnbpafiamejdnhcphjbkeiagm_0.indexeddb.leveldb/000007.log 
-2021/03/20-17:09:17.241 7740 Level-0 table #11: started
-2021/03/20-17:09:17.241 7740 Level-0 table #11: 0 bytes OK
-2021/03/20-17:09:17.249 7740 Delete type=0 #7
-2021/03/20-17:09:17.249 7740 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2021/03/20-17:09:17.249 7740 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

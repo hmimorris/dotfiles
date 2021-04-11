@@ -1,7 +1,0 @@
-# GIMP gimp-crop-tool options
-
-(aspect-denominator 500)
-(aspect-numerator 500)
-(fixed-rule-active yes)
-
-# end of gimp-crop-tool options
