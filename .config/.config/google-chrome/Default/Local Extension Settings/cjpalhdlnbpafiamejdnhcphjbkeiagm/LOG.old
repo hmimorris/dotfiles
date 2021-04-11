@@ -1,0 +1,48 @@
+2021/03/20-17:09:14.694 77e1 Reusing MANIFEST /home/hunter/.config/google-chrome/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2021/03/20-17:09:14.695 77e1 Recovering log #10
+2021/03/20-17:09:14.718 77e1 Reusing old log /home/hunter/.config/google-chrome/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/000010.log 
+2021/03/20-17:12:18.414 7b4c Level-0 table #14: started
+2021/03/20-17:12:18.455 7b4c Level-0 table #14: 1606796 bytes OK
+2021/03/20-17:12:18.464 7b4c Delete type=0 #10
+2021/03/20-17:12:19.103 7b4c Level-0 table #16: started
+2021/03/20-17:12:19.189 7b4c Level-0 table #16: 2856943 bytes OK
+2021/03/20-17:12:19.193 7b4c Delete type=0 #13
+2021/03/20-17:12:19.195 7b4c Compacting 4@0 + 1@1 files
+2021/03/20-17:12:19.347 7b4c Generated table #17@0: 11 keys, 2266614 bytes
+2021/03/20-17:12:19.423 7b4c Generated table #18@0: 4 keys, 2283853 bytes
+2021/03/20-17:12:19.482 7b4c Generated table #19@0: 2 keys, 570889 bytes
+2021/03/20-17:12:19.482 7b4c Compacted 4@0 + 1@1 files => 5121356 bytes
+2021/03/20-17:12:19.498 7b4c compacted to: files[ 0 3 1 0 0 0 0 ]
+2021/03/20-17:12:19.498 7b4c Delete type=2 #11
+2021/03/20-17:12:19.498 7b4c Delete type=2 #9
+2021/03/20-17:12:19.498 7b4c Delete type=2 #16
+2021/03/20-17:12:19.498 7b4c Delete type=2 #7
+2021/03/20-17:12:19.498 7b4c Delete type=2 #14
+2021/03/20-17:13:09.263 79d7 Level-0 table #21: started
+2021/03/20-17:13:09.394 79d7 Level-0 table #21: 2270890 bytes OK
+2021/03/20-17:13:09.399 79d7 Delete type=0 #15
+2021/03/20-17:22:23.052 7fc3 Level-0 table #23: started
+2021/03/20-17:22:23.390 7fc3 Level-0 table #23: 2308039 bytes OK
+2021/03/20-17:22:23.400 7fc3 Delete type=0 #20
+2021/03/20-17:30:24.669 7fc3 Level-0 table #25: started
+2021/03/20-17:30:24.727 7fc3 Level-0 table #25: 1341827 bytes OK
+2021/03/20-17:30:24.731 7fc3 Delete type=0 #22
+2021/03/20-17:35:25.114 84c4 Level-0 table #27: started
+2021/03/20-17:35:25.160 84c4 Level-0 table #27: 2638491 bytes OK
+2021/03/20-17:35:25.165 84c4 Delete type=0 #24
+2021/03/20-17:35:25.166 84c4 Compacting 4@0 + 3@1 files
+2021/03/20-17:35:25.217 84c4 Generated table #28@0: 16 keys, 2745138 bytes
+2021/03/20-17:35:25.269 84c4 Generated table #29@0: 6 keys, 2161672 bytes
+2021/03/20-17:35:25.325 84c4 Generated table #30@0: 12 keys, 1569071 bytes
+2021/03/20-17:35:25.325 84c4 Compacted 4@0 + 3@1 files => 6475881 bytes
+2021/03/20-17:35:25.330 84c4 compacted to: files[ 0 3 1 0 0 0 0 ]
+2021/03/20-17:35:25.331 84c4 Delete type=2 #27
+2021/03/20-17:35:25.331 84c4 Delete type=2 #25
+2021/03/20-17:35:25.331 84c4 Delete type=2 #18
+2021/03/20-17:35:25.331 84c4 Delete type=2 #19
+2021/03/20-17:35:25.331 84c4 Delete type=2 #23
+2021/03/20-17:35:25.331 84c4 Delete type=2 #17
+2021/03/20-17:35:25.331 84c4 Delete type=2 #21
+2021/03/20-17:36:15.208 84c4 Level-0 table #32: started
+2021/03/20-17:36:15.254 84c4 Level-0 table #32: 2875830 bytes OK
+2021/03/20-17:36:15.263 84c4 Delete type=0 #26

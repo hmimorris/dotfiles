@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=sh /home/hunter/Desktop/startup.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Startup Script
+Name=Startup Script
+Comment[en_US]=Customizations
+Comment=Customizations

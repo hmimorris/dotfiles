@@ -1,0 +1,21 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "main.js" ]
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "16": "18.png",
+      "48": "icons_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmTKsWfA2e9H5BHs28VkIOh2C5Tx7QHZVM98S16mNZ0OAUn7ON7FKQVivirGLbkFg3UMQV0pCaPx4jH5MhetTzPo6m/b6krE9uTNrVfo6XmswzvPZRkDZE6IMse8ug6EitR9LV7L2rYpTYkONjUBnvvwqV8l2UcaxkPo8ARijPTwI6L5DElX7DT6pTTRT4XxYqoWKrCot/zdLdsYrCAgSopNYDqGWleC6h9n/DBb2kJsiDPpIB4VHVQ3H7v8ZL7iQq8WellO4DGeZqU/aHVs/r2SJ/pYC1X/scp4vPNrVHAmXJUwIw2ZaSo02YRcK1Sml+831RQb+qgasgqt+JewmowIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "permissions": [ "\u003Call_urls>", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   } ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.3.5"
+}

@@ -1,0 +1,119 @@
+{
+   "extensionDescription": {
+      "message": "Маленька кнопка для збереження картинок та відео в один клік"
+   },
+   "settings_addHotkey": {
+      "message": "Додати гарячу клавішу для іншої директорії"
+   },
+   "settings_defaultSavePath": {
+      "message": "Зберігати файли до (розташування за замовчуванням, кліки мишею та клавіша пробілу зберегають файли сюди):"
+   },
+   "settings_defaultSavePathPlaceholder": {
+      "message": "директорія за замовчуванням"
+   },
+   "settings_domainExclusions": {
+      "message": "Ніколи не показувати кнопку на цих сайтах (розділені пробілами):"
+   },
+   "settings_exclusions": {
+      "message": "CSS класи елементів, виключених зі сканування (розділені пробілами):"
+   },
+   "settings_filenamePrefix": {
+      "message": "Префікс імені файлу:"
+   },
+   "settings_filenamePrefixDate": {
+      "message": "дата та час"
+   },
+   "settings_filenamePrefixNone": {
+      "message": "без префікса"
+   },
+   "settings_filenamePrefixText": {
+      "message": "текст"
+   },
+   "settings_filenamePrefixTime": {
+      "message": "таймстамп"
+   },
+   "settings_forbidDuplicateFiles": {
+      "message": "Без дублікатів (запобігти збереження одного і того ж файла кілька разів):"
+   },
+   "settings_hideButton": {
+      "message": "Ховати кнопку коли на неї не наведений курсор миші:"
+   },
+   "settings_hotkey": {
+      "message": "гаряча клавіша"
+   },
+   "settings_icon": {
+      "message": "Іконка на кнопці:"
+   },
+   "settings_messageInvalidPath": {
+      "message": "Не можна вказувати абсолютні шляхи для завантажень. Прочитайте правила вище."
+   },
+   "settings_messageSuccess": {
+      "message": "Налаштування збережені."
+   },
+   "settings_minSize": {
+      "message": "Мінімальна ширина/висота зображення (в пікселях):"
+   },
+   "settings_modifier": {
+      "message": "модифікатор"
+   },
+   "settings_originalNameByDefault": {
+      "message": "Зберігати з оригінальним іменем, якщо воно є (міняє місцями дії правої та лівої кнопкок миші):"
+   },
+   "settings_pathRestrictions_1": {
+      "message": "Вказаний шлях для завантажень МАЄ бути відносним до вашої директорії для завантажень (ви можете перевірити ії в Інструменти -> Налаштування -> Загальні -> Завантаження -> Зберігати файли до)."
+   },
+   "settings_pathRestrictions_2": {
+      "message": "Наприклад ваша директорія для завантажень \"D:\\Downloads\", та ви бажаєте щоб це розширення зберігало файли до \"D:\\Downloads\\pictures\\dank-memes\","
+   },
+   "settings_pathRestrictions_3": {
+      "message": "тоді вам треба вказати лише \"pictures\\dank-memes\"."
+   },
+   "settings_pathRestrictions_4": {
+      "message": "Нажаль, розширення не мають можливості зберігати файли за межами вашої директорії для завантажень (\"D:\\Downloads\" у нашому випадку)."
+   },
+   "settings_pathRestrictions_5": {
+      "message": "Якщо вы ДУЖЕ бажаєте зберігати файли десь ще, шукайте \"Символічні посилання\"."
+   },
+   "settings_pathRestrictions_6": {
+      "message": "Також переконайтеся що ваши гарячі клавіші не перекривають гарячі клавіші браузера та одна одну."
+   },
+   "settings_placeUnderCursor": {
+      "message": "Розташовувати кнопку під курсором"
+   },
+   "settings_placeUnderCursorWarning": {
+      "message": "ЕКСПЕРИМЕНТАЛЬНА ФУНКЦІЯ, дуже незграбна"
+   },
+   "settings_position": {
+      "message": "Позиція кнопки (ігнорується якщо кнопка розташовується під курсором):"
+   },
+   "settings_positionBottomLeft": {
+      "message": "Знизу ліворуч"
+   },
+   "settings_positionBottomRight": {
+      "message": "Знизу праворуч"
+   },
+   "settings_positionTopLeft": {
+      "message": "Зверху ліворуч"
+   },
+   "settings_positionTopRight": {
+      "message": "Зверху праворуч"
+   },
+   "settings_reset": {
+      "message": "Скинути все"
+   },
+   "settings_save": {
+      "message": "Зберегти"
+   },
+   "settings_saveFullSized": {
+      "message": "Завжди зберігати повнорозмірну версію зображення (працює на twitter, tumblr, vk, instagram):"
+   },
+   "settings_saveOnHover": {
+      "message": "Зберігати при наведенні курсору з натиснутими Ctrl+Alt (рекомендовано використовувати з увімкненою \"Без дублікатів\"):"
+   },
+   "settings_savePathPlaceholder": {
+      "message": "зберігати файли до"
+   },
+   "settings_showSaveDialog": {
+      "message": "Показувати вікно \"Зберегти як\":"
+   }
+}

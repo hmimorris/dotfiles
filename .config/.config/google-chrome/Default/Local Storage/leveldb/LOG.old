@@ -1,0 +1,6 @@
+2021/03/20-17:09:13.169 3 Reusing MANIFEST /home/hunter/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2021/03/20-17:09:13.171 3 Recovering log #3
+2021/03/20-17:09:13.172 3 Reusing old log /home/hunter/.config/google-chrome/Default/Local Storage/leveldb/000003.log 
+2021/03/20-18:05:25.297 12 Level-0 table #5: started
+2021/03/20-18:05:25.312 12 Level-0 table #5: 14103 bytes OK
+2021/03/20-18:05:25.322 12 Delete type=0 #3

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "background_script.js": "/static/js/background_script.js",
+    "content_script.js": "/static/js/content_script.js",
+    "main.js": "/static/js/main.js",
+    "index.html": "/index.html",
+    "precache-manifest.4e209793549327e002b901d62fba9827.js": "/precache-manifest.4e209793549327e002b901d62fba9827.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/content_script.js.LICENSE": "/static/js/content_script.js.LICENSE",
+    "static/js/main.js.LICENSE": "/static/js/main.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/main.js"
+  ]
+}

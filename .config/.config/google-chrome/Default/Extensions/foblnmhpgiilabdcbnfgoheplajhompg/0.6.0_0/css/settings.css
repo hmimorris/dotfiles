@@ -1,0 +1,74 @@
+body {
+	min-width: 900px;
+}
+table {
+	border-collapse:collapse;
+	border: 1px solid grey;
+}
+table tr:not(#path-restrictions):not(#default-path):not(.folder) td {
+	border-bottom: 1px solid grey;
+}
+td:first-child {
+	max-width: 666px;
+	padding: 6px 10px;
+	height: 25px;
+}
+input#exclusions,
+input#domainExclusions,
+input.default-path {
+	width: 400px;
+}
+input.path {
+	width: 366px;
+}
+input[type=file] {
+	width: 350px;
+}
+button#save,
+button#reset {
+	margin: 20px 5px 5px;
+	font-size: 1.25em;
+}
+.alarm {
+	color: #D66;
+}
+.error {
+	color: red;
+}
+.invalid-path {
+	border: 2px solid red;
+}
+#icon-container {
+	vertical-align: bottom;
+	display: inline-block;
+	height: 32px;
+	width: 50px;
+}
+
+.folder {
+	height: 25px;
+}
+.folder td:first-child {
+	vertical-align: middle;
+	line-height: 23px;
+}
+.folder .key-container {
+	padding-right: 13px;
+	float: right;
+}
+.folder#blank-folder,
+#hidden-settings {
+	display: none;
+}
+.folder td > div {
+	display: inline-block;
+}
+.folder td > div:last-child {
+	float: right;
+}
+.folder input.key {
+	text-transform: uppercase;
+}
+#add-folder-container td {
+	padding: 6px 0 13px;
+}

@@ -1,0 +1,38 @@
+{
+   "autoScrollDownload": {
+      "message": "Auto Scroll Download"
+   },
+   "bulkDownload": {
+      "message": "Bulk Download"
+   },
+   "buttonSize": {
+      "message": "Button Size"
+   },
+   "extDescription": {
+      "message": "Adds download buttons to images on a web page."
+   },
+   "extName": {
+      "message": "One Click Image Downloader"
+   },
+   "hidden": {
+      "message": "Hide"
+   },
+   "large": {
+      "message": "Large"
+   },
+   "minimumImageSize": {
+      "message": "Minimum image size"
+   },
+   "option": {
+      "message": "Option"
+   },
+   "small": {
+      "message": "Small"
+   },
+   "stopAutoScrollDownload": {
+      "message": "Stop"
+   },
+   "title": {
+      "message": "One Click Image Downloader"
+   }
+}
