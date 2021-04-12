@@ -14,5 +14,9 @@ if [ ! -r $HOME/.config/i3/config ]; then ln -sv ../.dotfiles/.config/i3 $HOME/.
 
 if [ ! -r $HOME/.config/rofi/config ]; then ln -sv ../.dotfiles/.config/rofi $HOME/.config/; fi
 
+if [ ! -r $HOME/.gitconfig ]; then ln -sv .dotfiles/system/.gitconfig $HOME/.gitconfig; fi
+
+if [ ! -r $HOME/.fehbg ]; then ln -sv .dotfiles/system/.fehbg $HOME/.fehgb; fi
+
 #ln -sv “/runcom/.inputrc” ~
 #ln -sv “/git/.gitconfig” ~
