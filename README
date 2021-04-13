@@ -1,0 +1,28 @@
+ DOTFILES - Repository of linux/linux package configuration files with installer script for easy setup on a clean system.
+
+----- Files -----
+
+main
+  .config/
+    i3/
+      config - i3-gaps (window manager) config file
+    rofi/
+      config - rofi (application launcher) config file
+  runcom/
+    .bash_profile -
+    .bashrc -
+    .inputrc - TODO
+  system/
+    .alias :: bash alias configurations
+    .env :: bash environment variable configurations TODO
+    .fehbg :: feh (background image manager) config file TODO:MOVE
+    .function :: bash functions TODO
+    .gitconfig :: git configuration file
+    .path :: path modifications
+    .promp :: bash prompt configuration
+  .emacs - Emacs configuration file
+  .gitignore - Git ignore file
+  install.sh - Bash installation script
+  README - This file
+
+----- /Files -----
