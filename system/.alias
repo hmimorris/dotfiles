@@ -8,8 +8,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # some more ls aliases
-alias ls='ls -B --color=auto'
-alias ll='ls -alF'
+alias ls='ls -B --color=auto --group-directories-first'
+alias ll='ls -AlhF'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -33,3 +33,4 @@ alias duha='du -ha --max-depth=1 | sort -hr'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias ~="cd ~"

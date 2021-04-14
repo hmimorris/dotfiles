@@ -48,6 +48,12 @@ if [ -f ~/.prompt ]; then
     . ~/.prompt
 fi
 
+# Environment variables
+if [ -f ~/.env ]; then
+    . ~/.env
+fi	      
+
+# PAT
 if [ -f ~/.tokens ]; then
     . ~/.tokens
 fi    
@@ -66,3 +72,5 @@ fi
 # make Tab autocomplete regardless of filename case
 set completion-ignore-case on
 
+# do not clobber on redirect
+set -o noclobber

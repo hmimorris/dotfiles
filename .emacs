@@ -61,7 +61,7 @@
       (file+headline org-default-notes-file "Docs")
       "* [[%c][Doc:%?]]")
      ("j" "Journal Entry" entry
-      (file+olp+datetree "~/journal.org")
+      (file+olp+datetree "~/org/journal.org")
       "* %?" :empty-lines 1)
      ("l" "Link" entry
       (file+headline org-default-notes-file "Links")
