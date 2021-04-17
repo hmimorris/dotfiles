@@ -116,7 +116,7 @@
 		(lambda () (interactive) (find-file "~/org/notes.org")))
 
 (global-set-key (kbd "C-c e")
-		(lambda () (interactive) (find-file "~/.emacs"01)))
+		(lambda () (interactive) (find-file "~/.emacs")))
 
 (defun home ()
   (interactive)
@@ -239,3 +239,7 @@
 
 ;; Disable scratch buffer message
 (setq initial-scratch-message nil)
+
+;; Easy recompile
+(global-set-key (kbd "C-;")
+		(lambda () (interactive) (recompile)))
