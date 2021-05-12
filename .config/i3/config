@@ -204,7 +204,7 @@ gaps inner 15
 exec picom
 
 # Set background image
-exec "feh --bg-scale ~/Downloads/wallpaper\ 1080.jpg"
+exec "sh $HOME/.fehbg"
 
 # Place volume icon in tray
 exec volumeicon
