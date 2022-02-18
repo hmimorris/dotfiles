@@ -7,7 +7,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;;(package-initialize)
 
 ;; Disable toolbar
 (tool-bar-mode -1)
@@ -29,6 +29,15 @@
 
 ;; Return follows link
 (setq org-return-follows-link 1)
+
+;; TODO Keywords
+(setq org-todo-keywords
+      '((sequence "NEXT(n)" "TODO(t)" "|" "DONE(d)")
+	(sequence "CHCK(c)" "WAIT(w)" "|" "CNCL(x)")))
+
+;; TODO keyword colors
+(setq org-todo-keywords-faces
+      '(("NEXT" . "cornflower blue") ("WAIT" . "dark goldenrod") ("CHCK" . "dark goldenrod")))
 
 ;; Disable lisp evaluation, enable C++ evaluation
 (org-babel-do-load-languages
@@ -52,12 +61,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files
-   (quote
-    ("~/org-roam/20210117124139-home.org" "~/org/notes.org")))
+ '(org-agenda-files '("C:/Users/Hunter/Dropbox/org"))
  '(org-capture-templates
-   (quote
-    (("d" "Doc" entry
+   '(("d" "Doc" entry
       (file+headline org-default-notes-file "Docs")
       "* [[%c][Doc:%?]]")
      ("j" "Journal Entry" entry
@@ -74,9 +80,9 @@
       "* TODO %?")
      ("a" "Article" entry
       (file+headline org-default-notes-file "Articles")
-      "* %?%i"))))
- '(org-refile-targets (quote ((org-agenda-files :maxlevel . 6))))
- '(package-selected-packages (quote (which-key org-roam))))
+      "* %?%i")))
+ '(org-refile-targets '((org-agenda-files :maxlevel . 6)))
+ '(package-selected-packages '(which-key org-roam)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -85,6 +91,7 @@
  )
 
 ;; Org Capture
+(setq org-directory "C:/Users/Hunter/Dropbox/org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 
 ;; Word wrap functionality
@@ -113,7 +120,7 @@
 		(lambda () (interactive) (find-file "~/journal.org")))
 
 (global-set-key (kbd "C-c n")
-		(lambda () (interactive) (find-file "~/org/notes.org")))
+		(lambda () (interactive) (find-file org-default-notes-file)))
 
 (global-set-key (kbd "C-c e")
 		(lambda () (interactive) (find-file "~/.emacs")))
@@ -226,7 +233,7 @@
 (setq org-cycle-separator-lines 2)
 
 ;; Enable global star hiding in org mode
-(setq org-hide-leading-stars t)
+;; (setq org-hide-leading-stars t)
 
 ;; Enable line numbers globally
 ;;(setq global-linum-mode nil)
@@ -245,5 +252,154 @@
 		(lambda () (interactive) (recompile)))
 
 ;; Add flyspell
-(dolist (hook '(text-mode-hook))
-  (add-hook hook (lambda () (flyspell-mode 1))))
+;;(dolist (hook '(text-mode-hook))
+;;  (add-hook hook (lambda () (flyspell-mode 1))))
+
+;; Make Org link MACRO
+(fset 'Make\ Org\ Link
+      (kmacro-lambda-form [?\C-w ?\C-x ?\C-f ?\C-y ?. ?o ?r ?g return ?\C-x ?\C-s ?\C-x ?k return ?\C-c ?\C-l ?~ ?\\ ?o ?r ?g ?\\ ?\C-y ?. ?o ?r ?g return ?\C-y return] 0 "%d"))
+
+;; Clock Settings
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
+;; Org mode continuous clocking
+(setq org-clock-continuously nil)
+(setq org-clock-mode-line-total 'today)
+
+;; Org mode TODO logging
+(setq org-log-done 'time) ;; Log time when TODO item marked DONE
+;; (setq org-log-done 'note) '' Prompt for note when TODO item marked DONE
+(setq org-closed-keep-when-no-todo 't) ;; Keep time log when DONE tag removed
+
+;; Save Macro
+(defun save-macro (name)
+  "save a macro. Take a name as argument
+   and save save the last defined macro under
+   this name under the end of your .emacs"
+  (interactive "SName of the macro: ")
+  (kmacro-name-last-macro name)
+  (find-file user-init-file)
+  (goto-char (point-max))
+  (newline)
+  (switch-to-buffer nil))
+
+;; CUA Mode
+(cua-mode t)
+
+;; Melpa
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+;; Evil
+;;(require 'evil)
+;;(evil-mode 0)
+
+;; Agenda Formats
+(setq oap-format-a
+      '((agenda . " %t")
+	(todo   . " %?-12 s")
+	(tags   . " ")
+	(search . " %i %-12:c")))
+
+(setq oap-format-b
+      '((agenda . " %40b %t")
+	(todo   . " %40b ")
+	(tags   . " ")
+	(search . " %i %-12:c")))
+
+;; Breadcrumbs Format
+(setq org-agenda-breadcrumbs-separator "/")
+
+;; Dependency settings
+(setq org-enforce-todo-dependencies t)
+(setq org-agenda-dim-blocked-tasks 'invisible)
+
+;; Breadcrumb Program
+(setq org-agenda-prefix-format oap-format-a)
+(defun breadcrumbs_toggle ()
+  "Trigger agenda mode breadcrumbs."
+  (interactive)
+  (if (equal org-agenda-prefix-format oap-format-b)
+      (progn
+	(setq org-agenda-prefix-format
+	      oap-format-a))
+    (progn
+      (setq org-agenda-prefix-format
+	    oap-format-b)))
+  (org-agenda-redo))
+(add-hook 'org-agenda-mode-hook
+	  (lambda () (local-set-key (key "C-c b") 'breadcrumbs_toggle)))
+
+;; Only shows unscheduled tasks in org todo agenda
+(setq org-agenda-todo-ignore-scheduled nil)
+(defun toggle-ignore-scheduled ()
+  "Toggles display of scheduled tasks in org-agenda todo display."
+  (interactive)
+  (setq org-agenda-todo-ignore-scheduled (if (euql org-agenda-todo-ignore-scheduled 'all) nil 'all))
+  (org-agenda-redo))
+(add-hook 'org-agenda-mode-hook
+	  (lambda () (local-set-key (kbd "C-c s") 'toggle-ignore-scheduled)))
+
+;; Note: org-file-apps controls what program opens attachments
+
+;; Removing unused org-agenda-mode keybindings
+(add-hook 'org-agenda-mode-hook
+	  (lambda () (local-set-key (kbd "t") nil)))
+(add-hook 'org-agenda-mode-hook
+	  (lambda () (local-set-key (kbd "e") nil)))
+(add-hook 'org-agenda-mode-hook
+	  (lambda () (local-set-key (kbd "a") nil)))
+
+(setq org-todo-repeat-to-state t)
+
+;; Org Priorities
+(setq org-priority-highest 1)
+(setq org-priority-lowest 20)
+(setq org-priority-default 18)
+
+;; Removes priority upon task completion
+(defun remove-priority-when-complete ()
+  "Removes priority when task DONE"
+  (interactive)
+  (when (equal org-state "DONE")
+    (org-priority ?\s)))
+
+(add-hook 'org-after-todo-state-change-hook 'remove-priority-when-complete)
+
+(defun org-set-content-level ()
+  (interactive)
+  (org-content 2))
+(global-set-key (kbd "C-c r")
+		(lambda () (interactive) (org-set-content-level)))
+
+(fset 'agenda-todo-chck
+      (kmacro-lambda-form [?= ?T ?O ?D ?O ?\\ ?| ?C ?H ?C ?K return] 0 "%d"))
+
+(add-hook 'org-agenda-mode-hook
+	  (lambda () (local-set-key (kbd "C-=") 'agenda-todo-chck)))
+
+;; Ctrl-Tab to swap between windows
+(global-set-key [C-S-tab] 
+    (lambda ()
+      (interactive)
+      (other-window -1)))
+
+;; r13 Shortcut
+(defun r13 ()
+  (interactive)
+  (save-excursion
+    (progn
+      (beginning-of-line)
+      (skip-chars-forward "\s*")
+      (re-search-forward "TODO\s" (+ (point-marker) 5) t)
+      (push-mark (point-marker))
+      (end-of-line)
+      (re-search-forward "\s\s" (end-of-line) t -1)
+      (rot13-region (mark-marker) (point-marker))
+      (pop-mark))))
+
+;; Org formatting, star settings
+(setq org-startup-indented t
+      org-hide-leading-stars t)
