@@ -76,13 +76,13 @@
       (file+headline org-default-notes-file "Notes")
       "")
      ("t" "Task" entry
-      (file+headline org-default-notes-file "Tasks")
+      (file+headline org-default-notes-file "Inbox")
       "* TODO %?")
      ("a" "Article" entry
       (file+headline org-default-notes-file "Articles")
       "* %?%i")))
  '(org-refile-targets '((org-agenda-files :maxlevel . 6)))
- '(package-selected-packages '(which-key org-roam)))
+ '(package-selected-packages '(impatient-mode which-key org-roam)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -155,31 +155,6 @@
   )
 ;; Redefine file opening without clobbering universal argument
 (define-key org-mode-map "\C-c\C-o" 'org-open-maybe)
-
-;; ;; Blind writer program -- Version 1.0
-;; (defun blind-writer ()
-;;   "Activates blind writing for current buffer"
-;;   (interactive)
-;;   (let ((targetBuffer (current-buffer))
-;; 	(input "")
-;; 	(blindBuffer (generate-new-buffer "Blind Buffer")))
-;;     (switch-to-buffer blindBuffer)
-;;     (while (not (string= input ":eof"))
-;;       (setq input (read-string ": "))
-;;       (if (not (string= input ":eof"))
-;; 	  (if (string= input ":eop")
-;; 	      (progn
-;; 		(set-buffer targetBuffer)
-;; 		(insert-before-markers "\n\n")
-;; 		(set-buffer blindBuffer))
-;; 	    (progn
-;; 	      (erase-buffer)
-;; 	      (insert input)
-;; 	      (set-buffer targetBuffer)
-;; 	      (insert-before-markers input " ")
-;; 	      (set-buffer blindBuffer)))))
-;;     (switch-to-buffer targetBuffer)
-;;     (kill-buffer blindBuffer)))
 
 ;; Blind Writer Program -- Version 2.0
 (defun blind-writer ()
@@ -268,9 +243,9 @@
 (setq org-clock-mode-line-total 'today)
 
 ;; Org mode TODO logging
-(setq org-log-done 'time) ;; Log time when TODO item marked DONE
+; (setq org-log-done 'time) ;; Log time when TODO item marked DONE
 ;; (setq org-log-done 'note) '' Prompt for note when TODO item marked DONE
-(setq org-closed-keep-when-no-todo 't) ;; Keep time log when DONE tag removed
+; (setq org-closed-keep-when-no-todo 't) ;; Keep time log when DONE tag removed
 
 ;; Save Macro
 (defun save-macro (name)
@@ -360,13 +335,13 @@
 (setq org-priority-default 18)
 
 ;; Removes priority upon task completion
-(defun remove-priority-when-complete ()
-  "Removes priority when task DONE"
-  (interactive)
-  (when (equal org-state "DONE")
-    (org-priority ?\s)))
-
-(add-hook 'org-after-todo-state-change-hook 'remove-priority-when-complete)
+;(defun remove-priority-when-complete ()
+;  "Removes priority when task DONE"
+;  (interactive)
+;  (when (equal org-state "DONE")
+;    (org-priority ?\s)))
+;
+;(add-hook 'org-after-todo-state-change-hook 'remove-priority-when-complete)
 
 (defun org-set-content-level ()
   (interactive)
@@ -403,3 +378,9 @@
 ;; Org formatting, star settings
 (setq org-startup-indented t
       org-hide-leading-stars t)
+
+;; Inline Images
+(setq org-startup-with-inline-images t)
+
+;; Aspell
+(setq-default ispell-program-name "aspell")
